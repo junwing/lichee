@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row">
+        <div id="summary" class="col-xs-12 col-lg-3">
+            <div id="yesterday_income">
+                <div class="description">我的昨日总收益({{ sc.date }})</div>
+                <div id="income_number"><span ng-class="{'income_up': (sc.dayIncome > 0), 'income_down': (sc.dayIncome < 0)}">{{ sc.dayIncome | number:2 }}</span>元</div>
+            </div>
+            <div id="total_info">
+                <div>
+                    <div class="description">理财总额</div>
+                    <span>{{ sc.amount | number:2 }}</span>元
+                </div>
+                <div>
+                    <div class="description">累计收益</div>
+                    <span>{{ sc.totalIncome | number:2 }}</span>元
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="fund_info col-xs-12 col-lg-3" ng-repeat="fund in sc.funds">
+            <div class="fund_title">
+                <div class="fund_name">{{ fund.name}}</div>
+                <div class="fund_code">{{ fund.code }}</div>
+            </div>
+            <div class="fund_data">
+                <div>
+                    <div class="description">昨日收益({{fund.value_date}})</div>
+                    <span ng-class="{'income_up': (fund.dayIncome > 0), 'income_down': (fund.dayIncome < 0)}">{{ fund.dayIncome | number:2 }}</span>元
+                </div>
+                <div>
+                    <div class="description">累计收益</div>
+                    <span>{{ fund.amount - fund.principal | number:2}}</span>元
+                </div>
+                <div>
+                    <div class="description">昨日净值涨幅</div>
+                    <span ng-class="{'income_up': (fund.dayIncome > 0), 'income_down': (fund.dayIncome < 0)}">{{ fund.dayValIncome * 100/fund.preday_value | number:2}}</span>%
+                </div>
+                <div>
+                    <div class="description">持有金额</div>
+                    <span>{{ fund.amount }}</span>元
+                </div>
+            </div>
+            <div class="fund_query">
+                查看详情
+            </div>
+        </div>
+    </div>
+</div>

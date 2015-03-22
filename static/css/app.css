@@ -1,0 +1,75 @@
+.income_up {
+    color: #DA4453;
+}
+.income_down {
+    color: #A8FF60;
+}
+
+#summary {
+    color: #FFF;
+    background-color: #1B2032;
+}
+#yesterday_income {
+    padding-top: 15px;
+    border-bottom: 1px solid #7C7C7C;
+}
+#income_number {
+    display: block;
+    margin: 10px auto;
+}
+#income_number > span {
+    font-size: 3.5em;
+}
+#total_info {
+    padding: 15px 0;
+    overflow: auto;
+}
+#total_info > div {
+    float: left;
+    width: 50%;
+}
+#total_info span {
+    font-size: 1.5em;
+    color: #96CBFE;
+}
+.description {
+    color: #7C7C7C;
+}
+
+.fund_info {
+    padding: 0 !important;
+    margin-top: 5px;
+    border: 1px solid #CCC;
+}
+.fund_info > div {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.fund_title {
+    padding: 10px 15px 5px;
+    border-bottom: 1px solid #CCC;
+}
+.fund_name {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+.fund_code {
+    color: #7C7C7C;
+}
+.fund_data > div {
+    float: left;
+    width: 50%;
+    padding: 5px 0;
+}
+.fund_data > div > span {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+.fund_query {
+    background-color: #E1E1E1;
+    text-align: center;
+    clear: both;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
